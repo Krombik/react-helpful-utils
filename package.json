@@ -1,0 +1,55 @@
+{
+  "name": "react-helpful-utils",
+  "version": "1.0.0",
+  "description": "Fast, tree-shakable, and light-weight React utils and hooks",
+  "author": "Krombik",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Krombik/react-helpful-utils.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Krombik/react-helpful-utils/issues"
+  },
+  "homepage": "https://github.com/Krombik/react-helpful-utils#readme",
+  "type": "module",
+  "source": "src/index.ts",
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "build": "ts-node ./scripts/build.mts"
+  },
+  "peerDependencies": {
+    "@types/react": ">=16.8.0",
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
+  "peerDependenciesMeta": {
+    "@types/react": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^20.2.1",
+    "@types/react": "^18.2.6",
+    "@types/react-dom": "^18.2.4",
+    "prettier": "^2.8.8",
+    "ts-node": "^10.9.1",
+    "tsup": "^6.7.0",
+    "typescript": "^5.0.4"
+  },
+  "keywords": [
+    "react",
+    "utils",
+    "join",
+    "setRef",
+    "useConst",
+    "useDebounce",
+    "useDerivedState",
+    "useMergedRef",
+    "usePrevious",
+    "useUpdateEffect"
+  ],
+  "sideEffects": false
+}
