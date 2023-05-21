@@ -41,6 +41,8 @@ const run = async (outDir: string) => {
     throw new Error('TypeScript compilation failed');
   }
 
+  await addNestedPackagesJson(outDir);
+
   const children = await fs.readdir(outDir);
 
   const chunksDir = `${outDir}/${Folder.CHUNKS}`;
@@ -58,8 +60,6 @@ const run = async (outDir: string) => {
       await handleChild(path);
     }
   }
-
-  await addNestedPackagesJson(outDir);
 
   await fs.writeFile(`${outDir}/package.json`, await getMainPackageJson());
 
