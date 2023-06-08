@@ -1,6 +1,6 @@
 {
   "name": "react-helpful-utils",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Fast, tree-shakable, and light-weight React utils and hooks",
   "author": "Krombik",
   "license": "MIT",
@@ -47,6 +47,7 @@
     "useConst",
     "useDebounce",
     "useDerivedState",
+    "useForceRerender",
     "useMergedRef",
     "usePrevious",
     "useUpdateEffect"

@@ -25,6 +25,7 @@ yarn add react-helpful-utils
 - [useConst](#useconst)
 - [useDebounce](#usedebounce)
 - [useDerivedState](#usederivedstate)
+- [useForceRerender](#useforcererender)
 - [useMergedRef](#usemergedref)
 - [usePrevious](#useprevious)
 - [useNonNullablePrevious](#usenonnullableprevious)
@@ -62,6 +63,16 @@ A hook for managing derived state within a component. It provides a state value 
 
 ```ts
 const useDerivedState: <T>(outerValue: T) => [T, Dispatch<SetStateAction<T>>];
+```
+
+---
+
+### useForceRerender
+
+React hook to force a component rerender.
+
+```ts
+const useForceRerender: () => () => void;
 ```
 
 ---
