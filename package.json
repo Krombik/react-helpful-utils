@@ -1,8 +1,8 @@
 {
   "name": "react-helpful-utils",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Fast, tree-shakable, and light-weight React utils and hooks",
-  "author": "Krombik",
+  "author": "Andrii Dubetskyi",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -18,12 +18,13 @@
     "node": ">=10"
   },
   "scripts": {
-    "build": "ts-node ./scripts/build.mts"
+    "build": "tsup",
+    "watch": "tsup --watch",
+    "release": "tsup && npm publish ./build"
   },
   "peerDependencies": {
     "@types/react": ">=16.8.0",
-    "react": ">=16.8.0",
-    "react-dom": ">=16.8.0"
+    "react": ">=16.8.0"
   },
   "peerDependenciesMeta": {
     "@types/react": {
@@ -31,13 +32,12 @@
     }
   },
   "devDependencies": {
-    "@types/node": "^20.2.1",
-    "@types/react": "^18.2.6",
-    "@types/react-dom": "^18.2.4",
-    "prettier": "^2.8.8",
-    "ts-node": "^10.9.1",
-    "tsup": "^6.7.0",
-    "typescript": "^5.0.4"
+    "@types/node": "^22.0.2",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "prettier": "^3.3.3",
+    "tsup": "^8.2.3",
+    "typescript": "^5.5.4"
   },
   "keywords": [
     "react",

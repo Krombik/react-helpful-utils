@@ -129,23 +129,23 @@ const setRef: <T>(ref: Ref<T> | undefined, instance: T | null) => void;
 
 ### join
 
-A utility function that concatenates an array of ReactNodes with a specified separator JSX element, resulting in a new array.
+A utility function that concatenates an array of ReactNodes with a specified separator, resulting in a new array.
 
 ```ts
-const join: (arr: ReactNode[], separator: JSX.Element) => ReactNode[];
+const join: (arr: ReactNode[], separator: ReactNode) => ReactNode[];
 ```
 
 ---
 
 ### mapAndJoin
 
-A utility function that maps an array of items to an array of ReactNodes using a mapper function, and concatenates them with a separator JSX element. Performs mapping and concatenation simultaneously, resulting in a new array.
+A utility function that maps an array of items to an array of ReactNodes using a mapper function, and concatenates them with a separator. Performs mapping and concatenation simultaneously, resulting in a new array.
 
 ```ts
 const mapAndJoin: <T>(
   arr: T[],
   mapper: (item: T, index: number) => ReactNode,
-  separator: JSX.Element
+  separator: ReactNode
 ) => ReactNode[];
 ```
 
