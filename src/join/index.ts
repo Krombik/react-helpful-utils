@@ -6,7 +6,7 @@ import { ReactNode } from 'react';
 const join = (arr: ReactNode[], separator: ReactNode) => {
   const l = arr.length - 1;
 
-  if (l < 1) {
+  if (l < 1 || !separator) {
     return arr;
   }
 

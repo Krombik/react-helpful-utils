@@ -8,38 +8,36 @@ const mapAndJoin = <T>(
   mapper: (item: T, index: number) => ReactNode,
   separator: ReactNode
 ) => {
-  const l = arr.length;
+  const l = arr.length - 1;
 
-  if (l > 0) {
-    const _arr: ReactNode[] = [];
-
-    const isElement = typeof separator == 'object';
-
-    for (let i = 1; i < l; i++) {
-      const item = mapper(arr[i], i);
-
-      if (item != null && item !== false) {
-        _arr.push(
-          item,
-          isElement
-            ? { ...(separator as JSX.Element), key: `__${i}` }
-            : separator
-        );
-      }
-    }
-
-    const last = mapper(arr[l], l);
-
-    if (last != null && last !== false) {
-      _arr.push(last);
-    } else if (_arr.length) {
-      _arr.length--;
-    }
-
-    return _arr;
+  if (l < 1 || !separator) {
+    return arr.map(mapper);
   }
 
-  return [];
+  const _arr: ReactNode[] = [];
+
+  const isElement = typeof separator == 'object';
+
+  for (let i = 0; i < l; i++) {
+    const item = mapper(arr[i], i);
+
+    if (item != null && item !== false) {
+      _arr.push(
+        item,
+        isElement ? { ...(separator as JSX.Element), key: `__${i}` } : separator
+      );
+    }
+  }
+
+  const last = mapper(arr[l], l);
+
+  if (last != null && last !== false) {
+    _arr.push(last);
+  } else if (_arr.length) {
+    _arr.length--;
+  }
+
+  return _arr;
 };
 
 export default mapAndJoin;
