@@ -1,15 +1,11 @@
-import { useState } from 'react';
+import { useReducer } from 'react';
+
+const toggleReducer = (state: boolean) => !state;
 
 /**
  * React hook to force a component rerender.
  * @returns A function that triggers a rerender of the component.
  */
-const useForceRerender = () => {
-  const forceRerender = useState<{}>()[1];
-
-  return () => {
-    forceRerender({});
-  };
-};
+const useForceRerender: () => void = () => useReducer(toggleReducer, false)[1];
 
 export default useForceRerender;
