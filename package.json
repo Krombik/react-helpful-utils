@@ -1,6 +1,6 @@
 {
   "name": "react-helpful-utils",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Fast, tree-shakable, and light-weight React utils and hooks",
   "author": "Andrii Dubetskyi",
   "license": "MIT",
